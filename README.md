@@ -20,7 +20,7 @@ After a few previous versions and a long break, I couldn't figure out where I le
 * NOTE: If you look at any of the .sql files, you'll probably notice that the only datatypes I declare are text and numeric. SQLite does not use "static typing" like the majority of SQL databases. If I were to specify datatypes like varchar(30), SQLite would interpret it as datatype text. There's only 5 storage classes in SQLite, and there are 5 datatype affinities. None, Text, Numeric, Real, Integer. Specific datatype declarations are translated into the closest match for storage class, and retreiving values from storage into datatype is translated into the best-preserving datatype affinity anyways.
 
 ### Script 2 - Populate raw tables with data
-#### Status: Complete
+#### Status: Testing
 
 * Creates a list of every file in ../import/
 * Using the filenames, it determines the corresponding table
