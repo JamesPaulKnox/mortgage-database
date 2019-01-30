@@ -1,5 +1,5 @@
 from app_config import *
-import glob
+import glob, string
 
 #####
 
@@ -8,16 +8,17 @@ def populate(table, columns):
 	print(current)
 	
 	for row in open(current):
+		row = row.translate(str.maketrans("", "", "'"))
 		row = row.split("|")
 		
 		while len(row) < columns:
 			row.append("")
 		
 		data = "'" + "','".join(map(str, row)) + "'"
-		
+
 		sql_str = "INSERT INTO " + table + " VALUES (" + data + ");"
 		
-		print(sql_str)
+		# ~ print(sql_str)
 		
 		c.execute(sql_str)
 
