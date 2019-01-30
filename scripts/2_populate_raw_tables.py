@@ -15,7 +15,13 @@ def populate(table, columns):
 		
 		data = "'" + "','".join(map(str, row)) + "'"
 		
-		c.execute("INSERT INTO " + table + " VALUES (" + data + ");")
+		sql_str = "INSERT INTO " + table + " VALUES (" + data + ");"
+		
+		print(sql_str)
+		
+		c.execute(sql_str)
+
+		
 
 	conn.commit()
 
