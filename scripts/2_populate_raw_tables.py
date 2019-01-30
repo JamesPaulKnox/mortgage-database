@@ -31,4 +31,4 @@ for current in files:
 	if "historical_data1_time_" in current and not "harp" in current:
 		populate("raw_freddie_performance", 26)
 	elif "historical_data1_" in current and not "harp" in current:
-		populate("raw_freddie_origination", 26)
+		populate("raw_freddie_origination", 27)
